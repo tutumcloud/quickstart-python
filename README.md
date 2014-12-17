@@ -61,7 +61,6 @@ Using the [Tutum CLI](https://github.com/tutumcloud/tutum-cli), execute the foll
 Then, to retrieve the endpoint where the container is listening to, do:
 
 	$ tutum container ps
-	utum container ps
 	NAME               UUID      STATUS     IMAGE                                   RUN COMMAND       EXIT CODE  DEPLOYED       PORTS
 	quickstart-python  8bdc89a2  ▶ Running  tutum.co/user/quickstart-python:latest  python app.py                5 minutes ago  quickstart-python.f3ff91a8-user.node.tutum.io:5000->5000/tcp
 
