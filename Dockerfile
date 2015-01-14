@@ -14,7 +14,7 @@ RUN pip install -r requirements.txt
 EXPOSE 5000
 
 # Environment Variables
-NAME "World"
+ENV NAME World
 
 # Define our command to be run when launching the container
 CMD ["python", "app.py"]
