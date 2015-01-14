@@ -1,13 +1,13 @@
-Python Quickstart on Tutum
-==========================
+## Introduction
 
-This quickstart for Python applications on Tutum is broken down in different steps with increasing complexity:
+This tutorial will have you deploying a Python app to Tutum in minutes. 
 
-* **Step 1**: single-container web application
-* _(TBD)_ **Step 2**: two tier web application with web and database layers
-* _(TBD)_ **Step 3**: three tier web application with load balancing, web and database layers
+Hang on for a few more minutes to learn how it all works, so you can make the most out of Tutum.
 
-	
-## Next steps
+This tutorial assumes that you have:
 
-Check our [Getting Started](https://support.tutum.co/support/solutions/5000042949) section for more tutorials on service linking, discovery, scaling, etc.
+- a free [Tutum account](https://dashboard.tutum.co/accounts/register/)
+- at least one Tutum node available, [read this](https://support.tutum.co/support/solutions/articles/5000523221-your-first-node) to launch your first node
+- (optional) Docker installed - see the installation guides for [OS X, Windows and Linux](https://docs.docker.com/installation/#installation)
+
+Continue with this tutorial [here](https://tutum.freshdesk.com/support/solutions/articles/5000539695).
