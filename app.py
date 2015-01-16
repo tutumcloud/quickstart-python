@@ -1,5 +1,5 @@
 from flask import Flask
-from redis import Redis
+from redis import Redis, ConnectionError
 import os
 import socket
 
@@ -8,15 +8,19 @@ redis = Redis(host="redis", db=0, password=os.environ.get('REDIS_ENV_REDIS_PASS'
 
 app = Flask(__name__)
 
+
 @app.route("/")
 def hello():
+    try:
+        visits = redis.incr('counter')
+    except ConnectionError:
+        visits = "<i>cannot connect to Redis, counter disabled</i>"
 
-	try:
-		counter = redis.incr('counter')
-	except:
-		counter = "Redis Cache not found, counter disabled."		
+    html = "<h3>Hello {name}!</h3>" \
+           "<b>Hostname:</b> {hostname}<br/>" \
+           "<b>Visits:</b> {visits}"
+    return html.format(name=os.getenv('NAME', "world"), hostname=socket.gethostname(), visits=visits)
 
-	return "Hello " + os.environ.get('NAME') + '!</br>' + "Hostname: " + socket.gethostname() + '</br>' + "Counter: " + str(counter)
 
 if __name__ == "__main__":
-	app.run(host='0.0.0.0')
+    app.run(host='0.0.0.0')
