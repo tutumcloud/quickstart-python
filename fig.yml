@@ -1,0 +1,10 @@
+app:
+  build: .
+  links:
+    - "redis:redis"
+  ports:
+    - "5000:5000"
+redis:
+  image: tutum/redis
+  environment:
+    - REDIS_PASS=testPassword
