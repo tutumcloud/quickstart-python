@@ -11,7 +11,7 @@ ADD . /app
 RUN pip install -r requirements.txt
 
 # Make port 5000 available for links and/or publish
-EXPOSE 5000
+EXPOSE 80 
 
 # Environment Variables
 ENV NAME World
