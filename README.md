@@ -1,13 +1,38 @@
-## Introduction
+## quickstart-python
 
-This tutorial will have you deploying a Python app to Tutum in minutes. 
+A simple Python app (using Flask) which can easily be deployed to Tutum.
 
-Hang on for a few more minutes to learn how it all works, so you can make the most out of Tutum.
+This application support the [Getting Started with Python](https://support.tutum.co/support/solutions/folders/5000171774) on Tutum article - check it out.
 
-This tutorial assumes that you have:
+### Running locally
 
-- a free [Tutum account](https://dashboard.tutum.co/accounts/register/)
-- at least one Tutum node available, [read this](https://support.tutum.co/support/solutions/articles/5000523221-your-first-node) to launch your first node
-- (optional) Docker installed - see the installation guides for [OS X, Windows and Linux](https://docs.docker.com/installation/#installation)
+```
+$ git clone https://github.com/tutumcloud/quickstart-python.git
+$ cd quickstart-python
+$ docker build --tag quickstart-python .
+$ docker run -d -p 80 quickstart-python
+```
 
-Continue with this tutorial [here](https://tutum.freshdesk.com/support/solutions/articles/5000539695).
+Alternatively, you can run the dockerized version:
+
+```
+$ docker run -d -p 80 tutum/quickstart-python
+```
+
+Your app should now be running:
+
+```
+curl 192.168.59.103:49153
+Hello World!</br>Hostname: ebf2b5258db0</br>Counter: Redis Cache not found, counter disabled.
+```
+
+### Deploying to Tutum
+
+[Install the Tutum CLI.](https://support.tutum.co/support/solutions/articles/5000049209-installing-the-command-line-interface-tool)
+
+```
+$ tutum login
+$ tutum service run tutum/quickstart-python 
+```
+
+**Continue with this tutorial [here](https://tutum.freshdesk.com/support/solutions/folders/5000171774).**
