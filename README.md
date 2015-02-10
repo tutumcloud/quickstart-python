@@ -35,4 +35,4 @@ $ tutum login
 $ tutum service run tutum/quickstart-python 
 ```
 
-**Continue with this tutorial [here](https://tutum.freshdesk.com/support/solutions/folders/5000171774).**
+**Continue with this tutorial [here](https://support.tutum.co/support/solutions/folders/5000171774).**
