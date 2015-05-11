@@ -1,0 +1,10 @@
+web:
+  image: tutum/quickstart-python
+  links:
+    - "redis:redis"
+  ports:
+    - "5000:80"
+redis:
+  image: tutum/redis
+  environment:
+    - REDIS_PASS=password
