@@ -1,5 +1,5 @@
 sut:
-  build: .
+  image: this
   links:
     - redis
   command: echo "Test pass!"
