@@ -1,10 +1,8 @@
 web:
   build: .
   links:
-    - "redis:redis"
+    - redis
   ports:
     - "5000:80"
 redis:
-  image: tutum/redis
-  environment:
-    - REDIS_PASS=password
+  image: redis

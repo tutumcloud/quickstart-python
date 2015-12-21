@@ -4,6 +4,4 @@ sut:
     - redis
   command: echo "Test pass!"
 redis:
-  image: tutum/redis
-  environment:
-    - REDIS_PASS=password
+  image: redis

@@ -4,7 +4,7 @@ import os
 import socket
 
 # Connect to Redis
-redis = Redis(host="redis", db=0, password=os.environ.get('REDIS_ENV_REDIS_PASS'))
+redis = Redis(host="redis", db=0)
 
 app = Flask(__name__)
 
