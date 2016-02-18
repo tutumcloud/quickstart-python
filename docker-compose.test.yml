@@ -1,5 +1,5 @@
 sut:
-  image: this
+  image: $IMAGE_NAME
   links:
     - redis
   command: echo "Test pass!"
