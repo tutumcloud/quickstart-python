@@ -1,8 +1,0 @@
-web:
-  build: .
-  links:
-    - redis
-  ports:
-    - "5000:80"
-redis:
-  image: redis
